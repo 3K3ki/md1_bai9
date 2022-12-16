@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="put_in">Nhập m <div></div>
+<input type="number" id="put_in1">Nhập f <div></div>
+<button onclick="doiFeetToMeter()" >Tính m</button>
+<button onclick="doiMeterToFeet()" >Tính f</button>
+<h1 id="ket_qua"></h1>
+<h1 id="ket_qua1"></h1>
+</body>
+<script>
+
+
+    function doiFeetToMeter(){
+      let feet = +document.getElementById('put_in1').value;
+      let m1 = 0.35 * feet;
+      document.getElementById('ket_qua').innerHTML = `<h1>Do F la: ${m1}</h1>`
+    }
+    function doiMeterToFeet(){
+      let m = document.getElementById("put_in").value;
+     let  f1 = (3.279) * m ;
+      document.getElementById("ket_qua1").innerHTML= `<h1>feet la: ${f1}</h1>`
+    }
+</script>
+</html>

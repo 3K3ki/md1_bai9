@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="ket_qua"></h1>
+<button onclick="soNT()">Tinh</button>
+</body>
+<script>
+
+  //   let n = prompt("Nhập số nguyen tố ");
+  //   let count = 0; // dem so nguyen to
+  //   let i; // tim so nguyen to bat dua tu 2
+  //   if (n < 2) {
+  //     alert("không hợp lệ")
+  //   } else {
+  //     for (i = 1; i <= n; i++) {
+  //
+  //       if (n % i == 0) {
+  //         count++;
+  //       }
+  //     }
+  //     if(count==2){
+  //       alert("Là số nguyen tố ")
+  //     } else {
+  //       alert("Không phải số nguyên tố ")
+  //     }
+  //   }
+  // }
+      function soNT() {
+          let soLanInSNT = +prompt('Nhập so lan muon in: ')
+
+          let count = 0;
+          for (let snt = 2; count < soLanInSNT; snt++) {
+              let checkSNT = true;
+              for (let i = 2; i < snt; i++) {
+                  if (snt % i == 0) {
+                      checkSNT = false;
+                      break;
+                  }
+              }
+              if (checkSNT) {
+                  count++;
+                  document.write(snt + " ")
+              }
+          }
+      }
+</script>
+</html>
